@@ -1,4 +1,4 @@
-console.log('IT'S ALIVE!');
+console.log("IT'S ALIVE!");
 
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
@@ -59,19 +59,17 @@ for (let p of pages) {
 }
 
 // Step 4.2: Add color scheme switcher
-const darkModePreference = matchMedia("(prefers-color-scheme: dark)").matches ? "Dark" : "Light";
-document.body.insertAdjacentHTML(
-  'afterbegin',
-  `
+const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)").matches ? "Dark" : "Light";
+const colorSchemeHTML = `
 	<label class="color-scheme">
 		Theme:
 		<select>
-			<option value="light dark">Automatic (${darkModePreference})</option>
+			<option value="light dark">Automatic (` + darkModePreference + `)</option>
 			<option value="light">Light</option>
 			<option value="dark">Dark</option>
 		</select>
-	</label>`,
-);
+	</label>`;
+document.body.insertAdjacentHTML('afterbegin', colorSchemeHTML);
 
 // Step 4.4 & 4.5: Make the color scheme switcher work and save preference
 const select = document.querySelector('.color-scheme select');
