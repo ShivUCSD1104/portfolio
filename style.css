@@ -2,6 +2,8 @@
 html {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  /* Step 4.1: Enable automatic dark mode */
+  color-scheme: light dark;
 }
 
 body {
@@ -20,9 +22,10 @@ body {
 
 /* Navigation styling */
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 2rem;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -35,7 +38,7 @@ nav a {
 
 /* Current page link styling */
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
 
@@ -52,7 +55,7 @@ img {
 }
 
 /* Form styling - Step 3.1: Integrate typography */
-input, textarea, button {
+input, textarea, button, select {
   font: inherit;
 }
 
@@ -98,4 +101,12 @@ h1 {
 
 .projects h2 {
   margin: 0;
+}
+
+/* Step 4.3: Color scheme switcher positioning */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
