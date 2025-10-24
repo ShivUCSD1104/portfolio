@@ -13,5 +13,5 @@ renderProjects(projects, projectsContainer, 'h2');
 // Step 1.6: Add project count functionality
 const projectsTitle = document.querySelector('.projects-title');
 if (projectsTitle && projects) {
-  projectsTitle.textContent = `Projects (${projects.length})`;
+  projectsTitle.textContent = `${projects.length} Projects`;
 }
