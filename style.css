@@ -110,3 +110,27 @@ h1 {
   right: 1rem;
   font-size: 80%;
 }
+
+/* Step 3.2: GitHub Profile Stats Styling */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-radius: 0.5rem;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}

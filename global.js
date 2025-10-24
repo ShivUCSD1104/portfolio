@@ -39,6 +39,11 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   }
 }
 
+// Step 3.2: fetchGitHubData function to fetch GitHub user data
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
 // Only execute this code if not imported as a module
 if (typeof window !== 'undefined') {
   console.log("IT'S ALIVE!");
