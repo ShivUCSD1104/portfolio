@@ -1,8 +1,51 @@
-console.log("IT'S ALIVE!");
-
-function $$(selector, context = document) {
-  return Array.from(context.querySelectorAll(selector));
+// Step 1.2: fetchJSON function for loading project data
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    
+    // Check if the fetch request was successful
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    
+    // Parse the response into JSON format
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
 }
+
+// Step 1.4: renderProjects function to dynamically generate project content
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Clear existing content to avoid duplication
+  containerElement.innerHTML = '';
+  
+  // Loop through each project and create an article element
+  for (let project of projects) {
+    // Create a new article element for each project
+    const article = document.createElement('article');
+    
+    // Define the content dynamically using innerHTML
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+    
+    // Append the article to the container
+    containerElement.appendChild(article);
+  }
+}
+
+// Only execute this code if not imported as a module
+if (typeof window !== 'undefined') {
+  console.log("IT'S ALIVE!");
+
+  function $$(selector, context = document) {
+    return Array.from(context.querySelectorAll(selector));
+  }
 
 // Step 2: Automatic current page link (commented out, now handled in Step 3.2)
 // let navLinks = $$("nav a");
@@ -92,47 +135,6 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value;
 });
 
-// Step 1.2: fetchJSON function for loading project data
-export async function fetchJSON(url) {
-  try {
-    // Fetch the JSON file from the given URL
-    const response = await fetch(url);
-    
-    // Check if the fetch request was successful
-    if (!response.ok) {
-      throw new Error(`Failed to fetch projects: ${response.statusText}`);
-    }
-    
-    // Parse the response into JSON format
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching or parsing JSON data:', error);
-  }
-}
-
-// Step 1.4: renderProjects function to dynamically generate project content
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-  // Clear existing content to avoid duplication
-  containerElement.innerHTML = '';
-  
-  // Loop through each project and create an article element
-  for (let project of projects) {
-    // Create a new article element for each project
-    const article = document.createElement('article');
-    
-    // Define the content dynamically using innerHTML
-    article.innerHTML = `
-      <${headingLevel}>${project.title}</${headingLevel}>
-      <img src="${project.image}" alt="${project.title}">
-      <p>${project.description}</p>
-    `;
-    
-    // Append the article to the container
-    containerElement.appendChild(article);
-  }
-}
-
 // Step 5: Better contact form (Optional)
 const form = document.querySelector('form');
 
@@ -155,4 +157,5 @@ form?.addEventListener('submit', function (event) {
   // Open email client with the properly formatted URL
   location.href = url;
 });
+}
 
