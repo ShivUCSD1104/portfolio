@@ -8,9 +8,6 @@ const latestProjects = projects.slice(0, 3);
 // Step 2.1: Select the projects container
 const projectsContainer = document.querySelector('.projects');
 
-// Step 2.1: Render the latest projects with h2 heading level
-renderProjects(latestProjects, projectsContainer, 'h2');
-
 // Step 3.2: Fetch GitHub data for the specified user
 const githubData = await fetchGitHubData('shivucsd1104');
 
@@ -28,3 +25,6 @@ if (profileStats) {
         </dl>
     `;
 }
+
+// Step 2.1: Render the latest projects with h2 heading level (AFTER GitHub data processing)
+renderProjects(latestProjects, projectsContainer, 'h2');
