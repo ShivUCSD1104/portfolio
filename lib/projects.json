@@ -1,62 +1,62 @@
 [
   {
-      "title": "Lorem ipsum dolor sit",
+      "title": "IMC Prosperity 3: Global Trading Challenge",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        "
+      "description": "• IMC Prosperity Top 6%; peaked at rank 22 globally: market making, ETF arbitrage, delta hedging, and volatility modeling + more."
   },
   {
-      "title": "Ut enim ad minim",
+      "title": "CUDA Kernels: Autocorrelation & Sum Reduction",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n          nisi ut aliquip ex ea commodo consequat.\n        "
+      "description": " • Published cuda-kernels on PyPI: https://pypi.org/project/cuda-kernels/0.1.0/; GPU autocorrelation & sum reduction library, 50-100x speedup vs CPU"
   },
   {
-      "title": "Duis aute irure dolor",
+      "title": "C++ Basics to CUDA Kernels",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n          dolore eu fugiat nulla pariatur.\n        "
+      "description": "My notes for learning C++ from a revision of the basics to an introduction to GPU programming using CUDA. \n Includes exercises and projects to practice the concepts from NVIDIA's Accelerated Computing in CUDA C/C++ course."
   },
   {
-      "title": "Excepteur sint occaecat",
+      "title": "SensorChat - SEELAB @ UCSD ",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui\n          officia deserunt mollit anim id est laborum.\n        "
+      "description": "Improved numerical reasoning in quantized LLMs using chain-of-thought over time-series data \n Developed multi-agent CoT reasoning model using DPO finetuning and novel grader with Bayesian reasoning "
   },
   {
-      "title": "Sed ut perspiciatis unde",
+      "title": "Pandera.net: Modeling & Computational Mathematics",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Sed ut perspiciatis unde omnis iste natus error sit voluptatem\n          accusantium doloremque laudantium.\n        "
+      "description": "• Visualized implied volatility surfaces, order flow ravines, and the US yield curve  "
   },
   {
-      "title": "Totam rem aperiam eaque",
+      "title": "Ureshii - AI Mental Health Platform",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi\n          architecto beatae vitae dicta sunt.\n        "
+      "description": "Clinical psychology backed data tracking and propietary machine learning heuristics for mental wellbeing. Partnered with Jio (India's largest telecom company) to peek at 200k+ users in 18+ countries."
   },
   {
-      "title": "Explicabo nemo enim ipsam",
+      "title": "Crypto Pairs Trading",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut\n          odit aut fugit sed quia consequuntur.\n        "
+      "description": "Bayesian Inference + Hidden Markov Models + Deep Q Network for LTC/BCH trading. \n 1st place UCSD Quantathon "
   },
   {
-      "title": "Magni dolores eos qui",
+      "title": "StartupSD-LLM",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Magni dolores eos qui ratione voluptatem sequi nesciunt neque porro\n          quisquam est qui dolorem ipsum quia dolor.\n        "
+      "description": "RAG LLM Pipeline for StartupSD Intuit Hackathon, Gravity.ai challenge"
   },
   {
-      "title": "Sit amet consectetur adipisci",
+      "title": "LexiLearn",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Sit amet consectetur adipisci velit sed quia non numquam eius modi\n          tempora incidunt ut labore et dolore magnam.\n        "
+      "description": "\n Image book generation from text input for children and those with dyslexia"
   },
   {
-      "title": "Aliquam quaerat voluptatem",
+      "title": "Jane Street Puzzles",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum\n          exercitationem ullam corporis suscipit.\n        "
+      "description": "Verified solutions to Dec 2024, Feb, March, April 2025 Jane Street Puzzles"
   },
   {
-      "title": "Laboriosam nisi ut aliquid",
+      "title": "Distracted Driver Detection",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel\n          eum iure reprehenderit qui in ea voluptate.\n        "
+      "description": "Distracted Driver Image Classification Project. Used OpenCV to develop an image classifier applied to distracted driving dataset "
   },
   {
-      "title": "Velit esse quam nihil",
+      "title": "Sweat Analysis Device",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-      "description": "\n          Velit esse quam nihil molestiae consequatur vel illum qui dolorem eum\n          fugiat quo voluptas nulla pariatur.\n        "
+      "description": "Intel ISEF Finalist (Top 200 India). Real time monitoring Sweat compounds such as ammonia, salt, sugar, and urea for estimating the possibility of 14 different diseases using the ionisation method."
   }
 ]
