@@ -134,3 +134,15 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
 }
+
+/* Project year styling */
+.project-year {
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-radius: 0.25rem;
+  display: inline-block;
+}

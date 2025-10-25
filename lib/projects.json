@@ -1,61 +1,73 @@
 [
   {
       "title": "IMC Prosperity 3: Global Trading Challenge",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "• IMC Prosperity Top 6%; peaked at rank 22 globally: market making, ETF arbitrage, delta hedging, and volatility modeling + more."
   },
   {
       "title": "CUDA Kernels: Autocorrelation & Sum Reduction",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": " • Published cuda-kernels on PyPI: https://pypi.org/project/cuda-kernels/0.1.0/; GPU autocorrelation & sum reduction library, 50-100x speedup vs CPU"
   },
   {
       "title": "C++ Basics to CUDA Kernels",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "My notes for learning C++ from a revision of the basics to an introduction to GPU programming using CUDA. \n Includes exercises and projects to practice the concepts from NVIDIA's Accelerated Computing in CUDA C/C++ course."
   },
   {
       "title": "SensorChat - SEELAB @ UCSD ",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Improved numerical reasoning in quantized LLMs using chain-of-thought over time-series data \n Developed multi-agent CoT reasoning model using DPO finetuning and novel grader with Bayesian reasoning "
   },
   {
       "title": "Pandera.net: Modeling & Computational Mathematics",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "• Visualized implied volatility surfaces, order flow ravines, and the US yield curve  "
   },
   {
       "title": "Ureshii - AI Mental Health Platform",
+      "year": "2022",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Clinical psychology backed data tracking and propietary machine learning heuristics for mental wellbeing. Partnered with Jio (India's largest telecom company) to peek at 200k+ users in 18+ countries."
   },
   {
       "title": "Crypto Pairs Trading",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Bayesian Inference + Hidden Markov Models + Deep Q Network for LTC/BCH trading. \n 1st place UCSD Quantathon "
   },
   {
       "title": "StartupSD-LLM",
+      "year": "2024",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "RAG LLM Pipeline for StartupSD Intuit Hackathon, Gravity.ai challenge"
   },
   {
       "title": "LexiLearn",
+      "year": "2023",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "\n Image book generation from text input for children and those with dyslexia"
   },
   {
       "title": "Jane Street Puzzles",
+      "year": "2025",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Verified solutions to Dec 2024, Feb, March, April 2025 Jane Street Puzzles"
   },
   {
       "title": "Distracted Driver Detection",
+      "year": "2021",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Distracted Driver Image Classification Project. Used OpenCV to develop an image classifier applied to distracted driving dataset "
   },
   {
       "title": "Sweat Analysis Device",
+      "year": "2021",
       "image": "https://vis-society.github.io/labs/2/images/empty.svg",
       "description": "Intel ISEF Finalist (Top 200 India). Real time monitoring Sweat compounds such as ammonia, salt, sugar, and urea for estimating the possibility of 14 different diseases using the ionisation method."
   }
