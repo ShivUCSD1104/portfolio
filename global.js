@@ -30,8 +30,8 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     // Define the content dynamically using innerHTML
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
-      <div class="project-year">${project.year}</div>
       <img src="${project.image}" alt="${project.title}">
+      <div class="project-year">${project.year}</div>
       <p>${project.description}</p>
     `;
     
