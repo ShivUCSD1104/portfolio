@@ -192,3 +192,89 @@ h1 {
 .selected:is(path) {
   fill: var(--color);
 }
+
+/* Meta page statistics styling */
+.stats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--color-accent) 5%, transparent);
+  border-radius: 0.5rem;
+}
+
+.stats dt {
+  font-weight: bold;
+}
+
+.stats dd {
+  margin: 0;
+}
+
+/* Scatterplot styling */
+#commit-scatterplot {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0.5rem;
+}
+
+.commit-dot {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Axis and grid styling */
+.x-axis, .y-axis {
+  font-size: 12px;
+}
+
+.x-axis-label, .y-axis-label {
+  font-size: 14px;
+  font-weight: bold;
+  fill: currentColor;
+}
+
+/* Step 3.2: Tooltip styling */
+.tooltip {
+  display: none;
+  position: absolute;
+  background: color-mix(in srgb, var(--color-accent) 95%, white);
+  border: 2px solid var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  pointer-events: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 0.9em;
+}
+
+.tooltip p {
+  margin: 0.3em 0;
+}
+
+.tooltip strong {
+  color: var(--color-accent);
+}
+
+/* Step 5.4: Selected dots styling */
+circle.selected {
+  fill: #ff6b6b;
+}
+
+/* Step 5.3: Brush selection rectangle styling */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
