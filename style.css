@@ -241,7 +241,7 @@ h1 {
 .tooltip {
   display: none;
   position: absolute;
-  background: color-mix(in srgb, var(--color-accent) 95%, white);
+  background: color-mix(in srgb, var(--color-accent) 5%, transparent);
   border: 2px solid var(--color-accent);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -256,7 +256,7 @@ h1 {
 }
 
 .tooltip strong {
-  color: var(--color-accent);
+  color: inherit;
 }
 
 /* Step 5.4: Selected dots styling */

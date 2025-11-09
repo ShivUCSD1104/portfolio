@@ -337,9 +337,15 @@
       // Step 5.4: Brush event handler
       function brushed(event) {
         const selection = event.selection;
-        d3.select('#commit-scatterplot')
-          .selectAll('circle')
-          .classed('selected', (d) => isCommitSelected(selection, d));
+        if (selection) {
+          d3.select('#commit-scatterplot')
+            .selectAll('circle')
+            .classed('selected', (d) => isCommitSelected(selection, d));
+        } else {
+          d3.select('#commit-scatterplot')
+            .selectAll('circle')
+            .classed('selected', false);
+        }
         renderSelectionCount(selection);
         renderLanguageBreakdown(selection);
       }
