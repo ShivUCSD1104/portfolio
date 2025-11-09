@@ -16,7 +16,6 @@
     <dl id="stats" class="stats"></dl>
 
     <h2>Commit Timeline Scatterplot</h2>
-    <p>This scatterplot shows when commits were made over time. Each dot represents a commit. The size of each dot represents the number of lines changed in that commit.</p>
     <svg id="commit-scatterplot"></svg>
 
     <div id="tooltip" class="info tooltip">
@@ -37,7 +36,7 @@
       import { fetchJSON } from '../global.js';
 
       // Step 1.1: Reading the CSV file in D3
-      const commits = await d3.csv('../meta/loc.csv', (row) => ({
+      const commits = await d3.csv('loc.csv', (row) => ({
         ...row,
         line: Number(row.line),
         depth: Number(row.depth),
@@ -174,15 +173,17 @@
           .range([2, 10]);
 
         // Step 2.1: Drawing the dots with variable radius
-        svg.selectAll('circle')
+        const dots = svg.append('g')
+          .attr('class', 'dots');
+
+        dots.selectAll('circle')
           .data(data)
           .join('circle')
           .attr('cx', d => xScale(d.datetime))
           .attr('cy', d => yScale(d.hourFrac))
           .attr('r', d => radiusScale(d.totalLines))
           .attr('fill', 'steelblue')
-          .attr('opacity', 0.6)
-          .attr('class', 'commit-dot');
+          .attr('opacity', 0.6);
 
         // Step 2.2: Adding axes
         const xAxis = d3.axisBottom(xScale);
@@ -230,7 +231,7 @@
         const tooltip = d3.select('#tooltip');
 
         // Step 3.3 & 3.4: Making tooltip appear on hover and positioning it
-        svg.selectAll('.commit-dot')
+        svg.selectAll('circle')
           .on('mouseenter', function(event, d) {
             // Show and populate tooltip
             tooltip.style('display', 'block');
@@ -269,7 +270,7 @@
         svg.call(d3.brush().on('start brush end', brushed));
 
         // Step 5.2: Raise dots and everything after overlay
-        svg.selectAll('.commit-dot, .overlay ~ *').raise();
+        svg.selectAll('.dots, .overlay ~ *').raise();
       }
 
       // Step 5.4: Function to check if a commit is selected
@@ -336,9 +337,9 @@
       // Step 5.4: Brush event handler
       function brushed(event) {
         const selection = event.selection;
-        d3.selectAll('circle').classed('selected', (d) =>
-          isCommitSelected(selection, d),
-        );
+        d3.select('#commit-scatterplot')
+          .selectAll('circle')
+          .classed('selected', (d) => isCommitSelected(selection, d));
         renderSelectionCount(selection);
         renderLanguageBreakdown(selection);
       }
