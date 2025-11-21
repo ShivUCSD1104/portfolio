@@ -11,11 +11,11 @@ body {
 	   and use the OS's UI font as the website font
 	 */
   font: 100%/1.5 system-ui;
-  
+
   /* Limit content width and center it */
   max-width: 100ch;
   margin-inline: auto;
-  
+
   /* Add padding to prevent content from touching edges */
   padding: 1rem;
 }
@@ -55,7 +55,10 @@ img {
 }
 
 /* Form styling - Step 3.1: Integrate typography */
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font: inherit;
 }
 
@@ -72,12 +75,19 @@ form label {
   grid-column: 1 / -1;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   font: inherit;
 }
 
 /* Heading styles - Step 4.4: Finishing touches */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -221,17 +231,73 @@ h1 {
   border-radius: 0.5rem;
 }
 
+/* Pie chart styling */
+#language-pie {
+  max-width: 20em;
+  margin: 2rem auto;
+  overflow: visible;
+}
+
+#language-pie text {
+  font-size: 14px;
+  fill: currentColor;
+}
+
+#language-pie path {
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+#language-pie:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+/* Pie chart and legend container */
+.pie-chart-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 1rem 0;
+}
+
+/* Pie chart legend styling */
+.pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.pie-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.pie-legend .legend-swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.2em;
+}
+
+.pie-legend .legend-label {
+  font-size: 0.9em;
+}
+
+
 .commit-dot {
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 /* Axis and grid styling */
-.x-axis, .y-axis {
+.x-axis,
+.y-axis {
   font-size: 12px;
 }
 
-.x-axis-label, .y-axis-label {
+.x-axis-label,
+.y-axis-label {
   font-size: 14px;
   font-weight: bold;
   fill: currentColor;
@@ -267,7 +333,8 @@ circle.selected {
 /* Step 5.3: Brush selection rectangle styling */
 @keyframes marching-ants {
   to {
-    stroke-dashoffset: -8; /* 5 + 3 */
+    stroke-dashoffset: -8;
+    /* 5 + 3 */
   }
 }
 
@@ -277,4 +344,104 @@ circle.selected {
   stroke-opacity: 0.7;
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
+}
+
+/* Step 2.2: Unit visualization styling for files */
+.loc {
+  display: inline-block;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  align-items: start;
+}
+
+#files dt {
+  grid-column: 1;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-family: 'Courier New', 'Consolas', monospace;
+}
+
+#files dt .file-name {
+  font-family: 'Courier New', 'Consolas', monospace;
+}
+
+#files dt .line-count {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: color-mix(in srgb, currentColor 60%, transparent);
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15em;
+  margin: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+/* Step 3.1: Scrollytelling layout */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-1>* {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.step {
+  padding-bottom: 5vh;
+}
+
+/* Step 4: Second scrollytelling section for files */
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-top: 8rem;
+}
+
+#scrolly-2>* {
+  flex: 1;
+}
+
+#files-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#files-story {
+  position: relative;
 }
